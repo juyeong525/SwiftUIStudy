@@ -9,13 +9,37 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            HStack {
+                NavigationLink(destination: MyWebView(urlToLoad: "https://www.naver.com")){
+                    Text("네이버")
+                        .padding()
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                        .background(Color.green)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(15)
+                }
+                NavigationLink(destination: MyWebView(urlToLoad: "https://www.daum.net")){
+                    Text("다음")
+                        .padding()
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                        .background(Color.yellow)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(15)
+                }
+                NavigationLink(destination: MyWebView(urlToLoad: "https://www.google.com")){
+                    Text("구글")
+                        .padding()
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                        .background(Color.blue)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(15)
+                }
+            }
         }
-        .padding()
     }
 }
 
