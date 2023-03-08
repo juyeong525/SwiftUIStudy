@@ -19,7 +19,7 @@ struct MealMeunView: View {
                 }
                 Spacer().frame(width: 16)
             }
-            Spacer().frame(height: 30)
+            Spacer().frame(height: 40)
         }
         .frame(height: 70)
         .background(Color.white)
